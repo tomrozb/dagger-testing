@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">dagger-testing</string>
+    <string name="main_get_string">Get String</string>
+</resources>
