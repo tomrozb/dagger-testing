@@ -35,7 +35,7 @@ import pl.dagger.testing.app.App.AppComponent;
 import static org.assertj.android.api.Assertions.assertThat;
 
 @RunWith(RobolectricGradleTestRunner.class)
-@Config(emulateSdk = 21, reportSdk = 21, constants = BuildConfig.class)
+@Config(sdk = 21, constants = BuildConfig.class)
 public class MainActivityRobolectricTest {
 
     public static final String TEST_STRING = "Test string";
@@ -43,7 +43,7 @@ public class MainActivityRobolectricTest {
     @Before
     public void setTestComponent() {
         // DaggerMainActivityRobolectricTest_TestAppComponent may not be visible in Android Studio
-        // but the code compiles and works. This issue should be addressed in gradle plugin 1.3.x
+        // but the code compiles and works. This issue should be addressed in gradle plugin 1.4.x
         // https://bitbucket.org/hvisser/android-apt/issue/36/no-dagger2-generated-files-for-junit-tests
         AppComponent appComponent = DaggerMainActivityRobolectricTest_TestAppComponent.create();
         ((App) RuntimeEnvironment.application).setTestComponent(appComponent);
