@@ -17,6 +17,7 @@
 package pl.dagger.testing.app;
 
 import android.app.Application;
+import android.support.annotation.VisibleForTesting;
 
 import javax.inject.Singleton;
 
@@ -51,7 +52,7 @@ public class App extends Application {
     /**
      * Visible only for testing purposes.
      */
-    // @VisibleForTesting
+    @VisibleForTesting
     public void setTestComponent(AppComponent appComponent) {
         mAppComponent = appComponent;
     }
