@@ -29,6 +29,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        testApplicationId 'pl.dagger.testing.test'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
